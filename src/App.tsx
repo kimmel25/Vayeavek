@@ -1,5 +1,7 @@
+import VayeavekHomepage from "./Components/homepage";
+
 function App() {
-  return <div>Hello, Vayeavek</div>;
+  return <VayeavekHomepage />;
 }
 
 export default App;
