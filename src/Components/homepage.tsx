@@ -1,22 +1,15 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, X, Heart, BookOpen, User, FileText, MessageCircle } from 'lucide-react';
 
-type Comment = {
-  id: number;
-  author: string;
-  text: string;
-  date: string;
-};
-
 export default function VayeavekHomepage() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
-  const [comments, setComments] = useState<Comment[]>([
-    { id: 1, author: 'Anonymous', text: 'This site has been a lifeline for me. Thank you.', date: 'Nov 15, 2025' },
-    { id: 2, author: 'A Yungerman', text: 'Finally, resources that understand our world.', date: 'Nov 12, 2025' }
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [comments, setComments] = useState([
+    { id: 1, author: "Anonymous", text: "This site has been a lifeline for me. Thank you.", date: "Nov 15, 2025" },
+    { id: 2, author: "A Yungerman", text: "Finally, resources that understand our world.", date: "Nov 12, 2025" }
   ]);
-  const [newComment, setNewComment] = useState<string>('');
+  const [newComment, setNewComment] = useState("");
 
-  const handleCommentSubmit = (): void => {
+  const handleCommentSubmit = () => {
     if (newComment.trim()) {
       setComments([{
         id: comments.length + 1,
@@ -235,7 +228,7 @@ export default function VayeavekHomepage() {
           <div className="mb-8">
             <textarea
               value={newComment}
-              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewComment(e.target.value)}
+              onChange={(e) => setNewComment(e.target.value)}
               placeholder="Share your thoughts, words of chizuk, or how this site has helped you..."
               className="w-full p-4 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               rows={4}
