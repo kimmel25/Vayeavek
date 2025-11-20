@@ -33,14 +33,30 @@ src/
 
 ## Adding Content
 
-### Blog Posts
-Edit `src/data/blogPosts.ts` - Add divrei Torah or personal reflections
+### Blog Posts (CMS - Recommended!)
+1. Go to `/admin` after deployment
+2. Login with GitHub
+3. Click "New Blog Post"
+4. Write and publish!
+
+**OR** edit markdown files in `content/blog/` directly
 
 ### Resources
 Edit `src/data/resources.ts` - Add mental health organizations
 
 ### Torah Sources
 Edit `src/data/haskamos.ts` - Add quotes from Chazal, Tanach, etc.
+
+## CMS Setup
+
+This site includes **Decap CMS** for easy content management!
+
+See [CMS-SETUP.md](CMS-SETUP.md) for complete setup instructions.
+
+**Quick start:**
+1. Update `public/admin/config.yml` with your GitHub repo name
+2. Deploy to GitHub Pages or Netlify
+3. Access `/admin` to write posts!
 
 ## Build for Production
 
